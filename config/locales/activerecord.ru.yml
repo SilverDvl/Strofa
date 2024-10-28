@@ -1,0 +1,94 @@
+ru:
+  activerecord:
+    attributes:
+      article:
+        name: Название
+        content: Содержание
+        comments: Комментарии
+        user: Пользователь
+        cover_img: Обложка
+        created_at: Написана
+        updated_at: Обновлена
+      author:
+        name: Имя
+        books: Книги
+        created_at: Создан
+        updated_at: Обновлен
+      book:
+        title: Название
+        description: Описание
+        adult: Для взрослых
+        chapters_count: Число глав
+        rating: Общая оценка
+        created_at: Создана
+        updated_at: Обновлена
+      comment:
+        commentable: Что
+        user: Пользователь
+        content: Содержание
+        created_at: Создан
+        updated_at: Обновлен
+      genre:
+        name: Название
+        description: Описание
+        books: Книги
+        created_at: Создан
+        updated_at: Обновлен
+      review:
+        user: Пользователь
+        book: Книга
+        rating: Оценка
+        description: Описание
+        created_at: Создан
+        updated_at: Обновлен
+      user:
+        username: Имя пользователя
+        email: Email
+        date_of_birth: Дата Рождения
+        created_at: Зарегистрирован
+        updated_at: Обновлен
+      page:
+        slug: Идентификатор
+        content: Содержание
+        created_at: Создана
+        updated_at: Обновлена
+      contact:
+        email: Email
+        created_at: Создан
+        updated_at: Обновлен
+      admin_user:
+        email: Email
+        created_at: Создан
+        updated_at: Обновлен
+
+    models:
+      article:
+        one: Статья
+        other: Статьи
+      author:
+        one: Автор
+        other: Авторы
+      book:
+        one: Книга
+        other: Книги
+      comment:
+        one: Комментарий
+        other: Комментарии
+      genre:
+        one: Жанр
+        other: Жанры
+      review:
+        one: Отзыв
+        other: Отзывы
+      user:
+        one: Пользователь
+        other: Пользователи
+      page:
+        one: Страница
+        other: Страницы
+      contact:
+        one: Контакт
+        other: Контакты
+      admin_user:
+        one: Администратор
+        other: Администраторы

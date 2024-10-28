@@ -1,0 +1,4 @@
+.text-center
+  .card.mt-5.p-5
+    = sanitize(@page.content, tags: %w(h1 p))
+

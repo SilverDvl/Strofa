@@ -1,0 +1,23 @@
+ru:
+  admin:
+    sessions:
+      new:
+        admin_only: Представьтесь
+        login: Войти
+  layouts:
+    navigation:
+      about: О проекте
+      stub: Заглушка
+  pages:
+    stub:
+      do-not-miss: Не пропустите
+      info: Оставьте свой email и мы уведомим Вас о запуске
+      ok: Быть в курсе
+      leave_your_email: Ваш email
+  views:
+    pagination:
+      first: Первая
+      next: 'След'
+      last: 'Последняя'
+      previous: 'Пред'
+      truncate: '...'

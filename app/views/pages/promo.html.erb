@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Промо</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="/css/style.min.css?_v=20241023024525">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<a href="#" class="header__logo">
+						Строфы
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul>
+								<li>
+									<a href="#" class="_active">Промо</a>
+								</li>
+								<li>
+									<a href="/about">О нас</a>
+								</li>
+								<li>
+									<a href="#">Прототип</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__main-promo main-promo">
+				<picture><source srcset="/img/main-promo-bg.webp" type="image/webp"><img src="/img/main-promo-bg.png" alt="" class="main-promo__bg"></picture>
+				<div class="main-promo__container">
+					<div class="main-promo__content">
+						<h1>Строфы</h1>
+						<p>
+							С нами ты сможешь превратить чтение в <span class="outlining">живой диалог</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="page__waiting waiting">
+				<div class="waiting__container">
+					<div class="waiting__content">
+						<h2 class="outlining">Что вас ждет?</h2>
+						<div class="waiting__body">
+							<div class="waiting__column">
+								<div class="waiting__item">
+									<div class="waiting__title">Моментальные обсуждения</div>
+									<div class="waiting__image">
+										<img src="/img/icons/figure-1.svg" alt="">
+									</div>
+									<p>
+										Поделись цитатой, эмоцией или идеей сразу после прочтения любимого произведения
+									</p>
+								</div>
+							</div>
+							<div class="waiting__column">
+								<div class="waiting__item">
+									<div class="waiting__title">Интерактивное сообщество</div>
+									<div class="waiting__image">
+										<img src="/img/icons/figure-2.svg" alt="">
+									</div>
+									<p>
+										Обсуждай книги с теми, кто уже их прочёл, или присоединяйся к тем, кто только
+										начинает
+									</p>
+								</div>
+							</div>
+							<div class="waiting__column">
+								<div class="waiting__item">
+									<div class="waiting__title">Личные заметки</div>
+									<div class="waiting__image">
+										<img src="/img/icons/figure-3.svg" alt="">
+									</div>
+									<p>
+										Создавай заметки и возвращайся к ним в любое время, чтобы освежить память
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__description description">
+				<div class="description__container">
+					<div class="description__content">
+						<div class="description__title">
+							<span class="outlining">Строфы</span> — это не просто площадка для отзывов, это живое
+							пространство для общения
+							и обмена
+							впечатлениями
+						</div>
+						<div class="description__images">
+							<picture><source srcset="/img/phone-2.webp" type="image/webp"><img class="description__image-1" src="/img/phone-2.png" alt=""></picture>
+							<picture><source srcset="/img/phone-2.webp" type="image/webp"><img class="description__image-2" src="/img/phone-2.png" alt=""></picture>
+							<picture><source srcset="/img/phone-2.webp" type="image/webp"><img class="description__image-3" src="/img/phone-2.png" alt=""></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__subscription subscription">
+				<img src="/img/icons/line-5.svg" alt="" class="subscription__line-1">
+				<img src="/img/icons/line-6.svg" alt="" class="subscription__line-2">
+				<div class="subscription__container">
+					<div class="subscription__content">
+						<div class="subscription__title">
+							Присоединяйтесь к нам и будьте <span class="outlining">в курсе</span> всех новостей
+						</div>
+						<%= simple_form_for :contact, url: contacts_path, html: { class: 'subscription__form' } do |f| %>
+							<div class="subscription__input">
+								<input data-required="email" autocomplete="off" type="text" name="email" placeholder="Ваш e-mail">
+							</div>
+							<button type="submit" class="subscription__button">Подписаться</button>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<a href="#" class="footer__logo">
+						Строфы
+					</a>
+					<div class="footer__menu">
+						<nav class="footer__body">
+							<ul>
+								<li>
+									<a href="#">Промо</a>
+								</li>
+								<li>
+									<a href="/about">О нас</a>
+								</li>
+								<li>
+									<a href="#">Прототип</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="/js/app.min.js?_v=20241023024525"></script>
+</body>
+
+</html>
