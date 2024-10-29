@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
     root to: "books#index"
   end
+  get 'stub', to: 'pages#stub', as: :stub
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -43,3 +45,4 @@ Rails.application.routes.draw do
 
   root "pages#about"
 end
+
