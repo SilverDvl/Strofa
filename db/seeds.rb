@@ -1,22 +1,16 @@
 require "csv"
 
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
 
 def import_books!
   books_file_path = Rails.root.join('test', 'fixtures', 'files', 'books.csv')
 
-  # CSV headers: "title", "authors", "genre", "description", "url"
+
   book_counter = 0
   CSV.foreach(books_file_path, headers: true) do |book_info|
-    # Create a book:
     book = Book.find_or_create_by!(title: book_info["title"], description: book_info["description"])
     book_counter += 1
 
     print '.'
-    # Attach a cover_img:
     if !book.cover_img.attached?
       cover_img_path = Rails.root.join('test', 'fixtures', 'files', 'book_cover_images', "#{book_counter}.png")
       book.cover_img.attach(
@@ -27,7 +21,7 @@ def import_books!
       )
     end
 
-    # Authors:
+    # Автор книги:
     author_names = book_info["authors"].split(',')
     book_authors = []
     author_names.each do |author_name|
@@ -35,7 +29,7 @@ def import_books!
     end
     book.authors = book_authors
 
-    # Genre:
+    # Жанр:
     genre_names = book_info["genre"].split(',')
     book_genres = []
     genre_names.each do |genre_name|
@@ -82,7 +76,6 @@ def insert_reviews!
     review_counter += 1
   end
 
-  # Next 25% - have 2 reviews
   all_books[25..49].each do |book|
     2.times do
       create_one_review!(book, reviews[review_counter]["rating"], reviews[review_counter]["description"])
@@ -90,15 +83,12 @@ def insert_reviews!
     end
   end
 
-  # next 25% have 3 reviews
   all_books[50..74].each do |book|
     3.times do
       create_one_review!(book, reviews[review_counter]["rating"], reviews[review_counter]["description"])
       review_counter += 1
     end
   end
-
-  # next 15% have 4 reviews
 
   all_books[75..89].each do |book|
     4.times do
@@ -107,9 +97,6 @@ def insert_reviews!
     end
   end
 
-  # the last 10% don't have reviews
-
-  # Recount rating based on reviews
   Book.find_each { |book| book.recount_rating! }
 end
 
