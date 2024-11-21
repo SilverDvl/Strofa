@@ -41,7 +41,7 @@ gem "bcrypt", "~> 3.1.7"
 gem "administrate"
 gem "administrate-field-active_storage"
 
-gem "rails-i18n", "~> 7.0.0" # For Rails >= 7.0.0
+gem "rails-i18n", "~> 7.0.10" # For Rails >= 7.0.0
 gem "simple_form"
 gem "slim-rails"
 
